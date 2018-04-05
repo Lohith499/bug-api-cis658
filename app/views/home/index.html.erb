@@ -8,20 +8,6 @@
 
 <div class="container">
   <!-- Example row of columns -->
-  <div class="row">
-    <% @bugs.each do |bug| %>
-        <div class="col-md-4">
-          <h2><%= bug.title%></h2>
-          <p><%=bug.description.truncate_words(30)%></p>
-          <p>
-            <%= link_to 'Read more >', bug, class: "btn btn-default"%>
-          </p>
-        </div>
-        <% end %>
-    </div>
-  </div>
-
-  <hr>
 
   <footer>
     <p>&copy; 2018 Company, Inc.</p>
