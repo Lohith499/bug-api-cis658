@@ -10,15 +10,15 @@ def show
 json_response(@bug)
 end
 def set_statuses
-    @statuses = Bug.statuses
+    @statuses = User.statuses
   end
 
   def set_issue_types
-    @issue_types = Bug.issue_types
+    @issue_types = User.issue_types
   end
 
   def set_priorities
-    @priorities = Bug.priorities
+    @priorities = User.priorities
   end
 
 def convert_bug_params
