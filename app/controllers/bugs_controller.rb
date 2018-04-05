@@ -1,6 +1,6 @@
 class BugsController < ApplicationController
-before_action :set_user , :convert_bug_params
-before_action :set_statuses, :set_issue_types, :set_priorities, :set_user_bug, only: [:show, :update, :destroy]
+before_action :set_user ,
+before_action :set_statuses, :set_issue_types, :set_priorities, :convert_bug_params, :set_user_bug, only: [:show, :update, :destroy]
 # GET /users/:user_id/bugs
 def index
 json_response(@user.bugs)
@@ -10,15 +10,15 @@ def show
 json_response(@bug)
 end
 def set_statuses
-    @statuses = User.statuses
+    @statuses = Bug.statuses
   end
 
   def set_issue_types
-    @issue_types = User.issue_types
+    @issue_types = Bug.issue_types
   end
 
   def set_priorities
-    @priorities = User.priorities
+    @priorities = Bug.priorities
   end
 
 def convert_bug_params
