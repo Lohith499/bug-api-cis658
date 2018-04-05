@@ -1,5 +1,5 @@
 class BugsController < ApplicationController
-before_action :set_user ,
+before_action :set_user
 before_action :set_statuses, :set_issue_types, :set_priorities, :convert_bug_params, :set_user_bug, only: [:show, :update, :destroy]
 # GET /users/:user_id/bugs
 def index
